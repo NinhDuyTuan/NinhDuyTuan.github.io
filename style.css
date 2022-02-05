@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#header .headerNav{
+    background-color: aquamarine;
+    padding : 2em 0;
+}
+
+#header .itemHeader{
+    padding-left: 1em;
+}
+img{
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+.section{
+    margin: 1em 0;
+    
+}
+/* begin modal search*/
+.modal-search{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);  
+    display: none;
+}
+.body-modal{
+    background-color:rgb(247, 167, 167);
+    min-height: 100px ;
+    padding: 30px auto;
+    justify-content: center;
+    align-items: center;
+    margin: 9em auto;
+    position: relative;
+    animation:modalFadeIn ease 0.4s;
+    border-radius: 10px;
+    display: flex;
+    
+}
+.body-modal .inputValue{
+    display: flex;
+    align-items: center;
+    
+}
+.padInput {
+    padding: 0 0.5em;
+    margin-left : 0.5em
+}
+.btn-search{
+    background-color: lawngreen;
+    margin-left: 1em;
+    margin-top : 1em;
+    margin-bottom: 1em;
+}
+.btn-search:hover{
+    background-color:rgb(124, 252, 0 , 0.8) ;
+}
+.date{
+    margin-bottom: 1em
+}
+.modal-close{
+    position: absolute;
+    top:0;
+    right:0;
+    padding : 0.5em;
+    font-weight: 500;
+    cursor: pointer;
+}
+.modal-close:hover{
+    color : #fff
+}
+.modal-search.open-modal{
+    display: block;
+}
+
+
+@keyframes modalFadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* begin loading */
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  /*Hidden class for adding and removing*/
+.lds-dual-ring.hidden {
+    display: none;
+}
+
+/*Add an overlay to the entire page blocking any further presses to buttons or other elements.*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.8);
+    z-index: 999;
+    opacity: 1;
+    transition: all 0.5s;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+    transform: rotate(0deg);
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+}
+/* end loading */
